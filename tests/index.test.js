@@ -6,14 +6,32 @@
 
 describe('sumOrProduct', () => {
     it('should return product of (4, 6)', () => {
-        assert.equal(sumOrProduct(4, 6), 24);
+        const first = 4;
+        const second = 6;
+        const expected = 24;
+
+        const actual = sumOrProduct(first, second);
+
+        assert.equal(actual, expected);
     });
 
     it('should return sum of (3, 6)', () => {
-        assert.equal(sumOrProduct(3, 6), 9 );
+        const first = 3;
+        const second = 6;
+        const expected = 9;
+
+        actual = sumOrProduct(first, second);
+
+        assert.equal(actual, expected);
     });
+
     it('should return 0 product of (2,0)', () => {
-        assert.equal(sumOrProduct(2, 0), 0 );
+        const first = 2;
+        const second = 0;
+        const expected = 0;
+        
+
+        assert.equal(, 0 );
     });
 
     it('should return 1 sum of (1,0)', () => {
@@ -53,10 +71,24 @@ describe('getPositiveSum', () => {
 
 describe('getMaxOfProductSum', () => {
     it('should return product + 3 of (2, 3, 4)', () => {
-        assert.equal(getMaxOfProductSum(2, 3, 4), 27)
+        //given
+        const first = 2;
+        const second = 3;
+        const third = 4;
+        const expected = 27;
+
+        //when
+        const actual = getMaxOfProductSum(first, second, third)
+
+        //then
+        assert.equal(actual, expected)
     });
 
     it('should return sum + 3 of (2, 2, 1)', () => {
         assert.equal(getMaxOfProductSum(2, 2, 1), 8)
+    });
+
+    it('should return 0 if both of the arguments undefined', () => {
+        assert.equal(sumOrProduct(), 0 );
     });
 });
