@@ -1,8 +1,6 @@
-const sumOrProduct = (first, second) => { 
-   
-    if(!first && first!=0) return 0;    
-    if(!second && second!=0) return 0;    
-
+const sumOrProduct = (first, second) => {    
+    if(!first && first != 0) return 0;    
+    if(!second && second != 0) return 0;
     return first%2?first+second:first*second;
 };
 

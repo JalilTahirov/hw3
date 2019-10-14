@@ -1,9 +1,3 @@
-// describe('', () => {
-//     it('should ...', () => {
-        
-//     });
-// })
-
 describe('sumOrProduct', () => {
     it('should return product of (4, 6)', () => {
         const first = 4;
@@ -216,7 +210,7 @@ describe('getMarkFromPoints', () => {
 
         //then
         assert.equal(actual, expected)
-    });
+    });   
 
     it('should return "E" if points are less than 40 and more than 20 (25)', () => {
         //given
@@ -230,14 +224,44 @@ describe('getMarkFromPoints', () => {
         assert.equal(actual, expected)
     });
 
-    it('should return "B" if points are less than 90 and more than 75 (80)', () => {
+    it('should return "D" if points are less than 60 and more than 40 (45)', () => {
         //given
-        const points = 80;       
-        const expected = 'B';
+        const points = 45;       
+        const expected = 'D';
 
         //when
         const actual = getMarkFromPoints(points)
 
+        //then
+        assert.equal(actual, expected)
+    });
+
+    it('should return "C" if points are less than 75 and more than 60 (65)', () => {
+        //given
+        const points = 65;       
+        const expected = 'C';
+        //when
+        const actual = getMarkFromPoints(points);
+        //then
+        assert.equal(actual, expected)
+    });
+
+    it('should return "B" if points are less than 90 and more than 75 (80)', () => {
+        //given
+        const points = 80;       
+        const expected = 'B';
+        //when
+        const actual = getMarkFromPoints(points)
+        //then
+        assert.equal(actual, expected)
+    });  
+    
+    it('should return "A" if points are less than 100 and more than 89 (90)', () => {
+        //given
+        const points = 90;       
+        const expected = 'A';
+        //when
+        const actual = getMarkFromPoints(points)
         //then
         assert.equal(actual, expected)
     });    
@@ -322,6 +346,17 @@ describe('checkIsNumberPrime', () => {
 
         //when
         const actual = checkIsPrime(14);
+
+        //then
+        assert.equal(actual, expected)
+    });
+
+    it('should return "false" if 39 is passed (39)', () => {
+        //given       
+        const expected = false;
+
+        //when
+        const actual = checkIsPrime(39);
 
         //then
         assert.equal(actual, expected)
